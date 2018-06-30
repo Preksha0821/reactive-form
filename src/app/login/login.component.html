@@ -1,20 +1,26 @@
-<form class="center" [formGroup]="loginForm">
-<app-header></app-header>
+<form class="center" [formGroup]="loginForm" (ngSubmit)="emitLoginInfo()">
+  <app-header></app-header>
   <mat-card>
     <div>
       <mat-form-field>
-        <input matInput placeholder="username" formControlName="userName" required>
+        <input matInput placeholder="username" formControlName="userName"> 
+        <mat-error>Please enter valid username</mat-error>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="password" formControlName="password" required>
+        <input matInput placeholder="password" formControlName="password">
+        <mat-error>Please enter valid password</mat-error>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field>
-        <input matInput placeholder="reenter password" formControlName="reenterpassword" required>
+        <input matInput placeholder="reenter password" formControlName="reenterpassword">
+        <mat-error>Please re-enter valid password</mat-error>
       </mat-form-field>
+    </div>  
+    <div>
+      <button mat-button class="button" [disabled]="loginForm.invalid">Login</button>
     </div>
   </mat-card>
 </form>
