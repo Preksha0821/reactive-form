@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { FormComponent } from './form/form.component';
+import { loginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -47,7 +47,7 @@ import {
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent,
+    loginComponent,
     HeaderComponent
   ],
   imports: [
