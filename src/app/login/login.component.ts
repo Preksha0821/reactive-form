@@ -17,8 +17,8 @@ export class loginComponent implements OnInit {
   createForm(fb: FormBuilder) {
     return fb.group({
       userName: ['', Validators.required],
-      password: ['', Validators.required],
-      reenterpassword: ['', Validators.required]
+      password: ['',Validators.compose ([Validators.required, Validators.minLength(4), Validators.maxLength(17)])],
+      reenterpassword: ['', Validators.required]  
     });
   }
 

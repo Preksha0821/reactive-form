@@ -10,7 +10,7 @@
     <div>
       <mat-form-field>
         <input matInput type="password" placeholder="password" formControlName="password">
-        <mat-error>Please enter valid password</mat-error>
+        <mat-error *ngIf="!loginForm.get('password').valid">Password should be between 4 and 17 characters</mat-error>
       </mat-form-field>
     </div>
     <div>
